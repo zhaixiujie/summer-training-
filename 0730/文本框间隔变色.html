@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    function btnclick1(){
+        var inl=document.getElementsByName("txt");
+        for(var i=0;i<inl.length;i++){
+            if(i%2==0){
+            inl[i].style.background="red";
+        }
+        else{
+            inl[i].style.background="blue";
+        }
+    }
+}
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" value="男" name="txt"/>
+        <input type="text" value="女" name="txt"/>
+        <input type="text" value="不知道" name="txt"/>
+        <input type="text" value="男" name="txt"/>
+        <input type="text" value="女" name="txt"/>
+        <input type="text" value="不知道" name="txt"/>
+        <input type="button" onclick="btnclick1()" value="click" />
+    </div>
+</body>
+</html>

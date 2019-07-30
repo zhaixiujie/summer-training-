@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>123456789</title>
+    <script type="text/javascript">
+    var time1;
+    var time2;
+        function leftscroll() {//左转
+            var title = document.title;
+            var first = title.charAt(0);
+            var second = title.substring(1, title.length);
+            document.title = second + first;
+            
+        }
+        setInterval("scroll()", 500);
+        function ok(){
+            time1=setInterval("leftscroll()",500);
+        }
+        function cancel(){
+            clearInterval(time1);
+            clearInterval(time2);
+        }
+        function rightscroll() {//右转
+            var title = document.title;
+            var first = title.charAt(8);
+            var second = title.substring(0, title.length-1);
+            document.title = first + second;
+            
+        }
+        function ok1(){
+            time2=setInterval("rightscroll()",500);
+        }
+</script>
+
+</head>
+<body>
+    <input type="button" value="左转" onclick="ok()"/>
+    <input type="button" value="右转" onclick="ok1()"/>
+    <input type="button" value="停止" onclick="cancel()"/>
+    </div>    
+</body>
+</html>
